@@ -5,9 +5,25 @@ function convertToRoman(num) {
       2:['C', 100], 
       3:['L', 50], 
       4:['X', 10], 
-      5:['V', 5], 
-      6:['I', 1]
+	  5:['IX',9],
+	  6:['VIII',8],
+	  7:['VII',7],
+	  8:['VI',6],
+	  9:['V',5],		
+      10:['IV', 4], 
+	  11:['III', 3], 
+	 12:['II', 2], 
+	 13:['I', 1], 
     };
+	let res="";
+	for(let i of obj){
+		const[key,value]=obj[i];
+		while(num>=value){
+			res+=key;
+			num-=value;
+		}
+	}
+	return res;
 
   //your code here
 
