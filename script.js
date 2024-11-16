@@ -1,29 +1,32 @@
 function convertToRoman(num) {
-  	const obj = {
-      0:['M',1000], 
-      1:['D', 500], 
-      2:['C', 100], 
-      3:['L', 50], 
-      4:['X', 10], 
-	  5:['IX',9],
-	  // 6:['VIII',8],
-	  // 7:['VII',7],
-	  // 8:['VI',6],
-	  6:['V',5],		
-      7:['IV', 4], 
-	  // 11:['III', 3], 
-	 // 12:['II', 2], 
-	 8:['I', 1]
-    };
-	let res="";
-	 const arr=Object.values(obj);
-	for(const[key,value] of arr){
-		while(num>=value){
-			res+=key;
-			num-=value;
-		}
-	}
-	return res;
+    const obj = [
+    ['M', 1000],
+    ['CM', 900],
+    ['D', 500],
+    ['CD', 400],
+    ['C', 100],
+    ['XC', 90],
+    ['L', 50],
+    ['XL', 40],
+    ['X', 10],
+    ['IX', 9],
+    ['V', 5],
+    ['IV', 4],
+    ['I', 1]
+  ];
+
+  let res = "";
+
+  // Loop through the array of Roman numeral-value pairs
+  for (const [roman, value] of obj) {
+    // While the number is greater than or equal to the value, append the Roman numeral
+    while (num >= value) {
+      res += roman;  // Append the Roman numeral
+      num -= value;  // Subtract the value from the number
+    }
+  }
+
+  return res; 
 
   //your code here
 
