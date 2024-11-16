@@ -13,7 +13,7 @@ function convertToRoman(num) {
       10:['IV', 4], 
 	  // 11:['III', 3], 
 	 // 12:['II', 2], 
-	 13:['I', 1], 
+	 13:['I', 1]
     };
 	let res="";
 	 const arr=Object.values(obj);
