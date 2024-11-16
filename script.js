@@ -9,11 +9,11 @@ function convertToRoman(num) {
 	  // 6:['VIII',8],
 	  // 7:['VII',7],
 	  // 8:['VI',6],
-	  9:['V',5],		
-      10:['IV', 4], 
+	  6:['V',5],		
+      7:['IV', 4], 
 	  // 11:['III', 3], 
 	 // 12:['II', 2], 
-	 13:['I', 1]
+	 8:['I', 1]
     };
 	let res="";
 	 const arr=Object.values(obj);
