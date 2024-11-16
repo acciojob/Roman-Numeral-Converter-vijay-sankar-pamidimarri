@@ -16,8 +16,8 @@ function convertToRoman(num) {
 	 13:['I', 1], 
     };
 	let res="";
-	for(let i of obj){
-		const[key,value]=obj[i];
+	 const arr=Object.values(obj);
+	for(const[key,value] of arr){
 		while(num>=value){
 			res+=key;
 			num-=value;
